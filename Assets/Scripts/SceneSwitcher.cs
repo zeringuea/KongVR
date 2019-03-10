@@ -15,7 +15,7 @@ public class SceneSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Equals))
+        if ((Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift)) && Input.GetKeyDown(KeyCode.Equals))
         {
             int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
             if (nextScene >= SceneManager.sceneCountInBuildSettings) nextScene = 0;
