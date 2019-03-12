@@ -57,6 +57,7 @@
         {
             spinning = true;
             isHeld = false;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
         protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)

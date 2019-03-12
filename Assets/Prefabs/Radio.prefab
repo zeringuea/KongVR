@@ -226,9 +226,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bypassRoomEffects: 0
   directivityAlpha: 0.2
-  directivitySharpness: 5
+  directivitySharpness: 1
   listenerDirectivityAlpha: 0.2
-  listenerDirectivitySharpness: 5
+  listenerDirectivitySharpness: 1
   gainDb: -10
   nearFieldEffectEnabled: 0
   nearFieldEffectGain: 1
