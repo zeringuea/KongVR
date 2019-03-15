@@ -15,6 +15,14 @@ namespace VRTK
     [AddComponentMenu("VRTK/Scripts/Locomotion/VRTK_DragWorld")]
     public class VRTK_DragWorld : MonoBehaviour
     {
+        //Important Notes:
+        //Scale state is used to determine if the player is: Small(4), Normal(3), Large(2), THICC(1)
+        //Sizes for each: Small(.2), Normal(1), Large(2.5), THICC(7.5)
+        //Movement Multipler: Small(4), Normal(3), Large(2), THICC(1)
+        //ScaleState also equals speed
+        public float[] sizes = { 7.5f, 2.5f, 1f, .2f };
+        private bool scalelock;
+
         /// <summary>
         /// The controller on which to determine as the activation requirement for the control mechanism.
         /// </summary>
@@ -108,9 +116,10 @@ namespace VRTK
         [Tooltip("The threshold the distance between the scale objects has to be above to consider a valid scale operation.")]
         public float scaleActivationThreshold = 0.002f;
         [Tooltip("the minimum scale amount that can be applied.")]
-        public Vector3 minimumScale = Vector3.one;
+        public Vector3 minimumScale = new Vector3(.2f, .2f, .2f);
         [Tooltip("the maximum scale amount that can be applied.")]
-        public Vector3 maximumScale = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
+        public Vector3 maximumScale = new Vector3(2.5f, 2.5f, 2.5f);
+        public Vector3 targetvec = new Vector3(1f, 1f, 1f);
 
         [Header("Custom Settings")]
 
@@ -317,11 +326,13 @@ namespace VRTK
         {
             ManageActivationState(e.controllerReference.hand, scaleActivationRequirement, true, ref scaleLeftControllerActivated, ref scaleRightControllerActivated, ref scaleActivated);
             previousControllerDistance = GetControllerDistance();
+            scalelock = false;
         }
 
         protected virtual void ScaleActivationButtonReleased(object sender, ControllerInteractionEventArgs e)
         {
             ManageActivationState(e.controllerReference.hand, scaleActivationRequirement, false, ref scaleLeftControllerActivated, ref scaleRightControllerActivated, ref scaleActivated);
+            scalelock = true;
         }
 
         protected virtual Vector3 GetLeftControllerPosition()
@@ -392,7 +403,7 @@ namespace VRTK
             if (rotationTrackingController == TrackingController.BothControllers && VRTK_ControllerReference.IsValid(leftControllerReference) && VRTK_ControllerReference.IsValid(rightControllerReference))
             {
                 Vector2 currentRotationAngle = GetControllerRotation();
-                float newAngle = Vector2.Angle(currentRotationAngle, previousRotationAngle)*Mathf.Sign(Vector3.Cross(currentRotationAngle, previousRotationAngle).z);
+                float newAngle = Vector2.Angle(currentRotationAngle, previousRotationAngle) * Mathf.Sign(Vector3.Cross(currentRotationAngle, previousRotationAngle).z);
                 RotateByAngle(newAngle);
                 previousRotationAngle = currentRotationAngle;
             }
@@ -428,12 +439,72 @@ namespace VRTK
 
             float currentDistance = GetControllerDistance();
             float distanceDelta = currentDistance - previousControllerDistance;
-            if (Mathf.Abs(distanceDelta) >= scaleActivationThreshold)
+            if (Mathf.Abs(distanceDelta) >= scaleActivationThreshold && scalelock == false)
             {
-                controllingTransform.localScale += (Vector3.one * Time.deltaTime * Mathf.Sign(distanceDelta) * scaleMultiplier);
-                controllingTransform.localScale = new Vector3(Mathf.Clamp(controllingTransform.localScale.x, minimumScale.x, maximumScale.x), Mathf.Clamp(controllingTransform.localScale.y, minimumScale.y, maximumScale.y), Mathf.Clamp(controllingTransform.localScale.z, minimumScale.z, maximumScale.z));
+                movementActivated = false;
+                scalelock = true;
+
+                //Functions that should just run once per size change:
+                //Scale Up
+                if (distanceDelta > 0)
+                {
+                    if (movementMultiplier > 1)
+                        movementMultiplier--;
+                    if (movementMultiplier == 1)
+                    {
+                        maximumScale = new Vector3(sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1]);
+                        minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
+                    }
+                    if (movementMultiplier == 2)
+                    {
+                        maximumScale = new Vector3(sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2]);
+                        minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
+                    }
+                    if (movementMultiplier == 3)
+                    {
+                        maximumScale = new Vector3(sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2]);
+                        minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
+                    }
+                }
+
+                //Scale Down
+                else if (distanceDelta < 0)
+                {
+                    if (movementMultiplier < 4)
+                        movementMultiplier++;
+                    if (movementMultiplier == 4)
+                    {
+                        maximumScale = new Vector3(sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2]);
+                        minimumScale = new Vector3(sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1]);
+                    }
+                    if (movementMultiplier == 3)
+                    {
+                        maximumScale = new Vector3(sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2]);
+                        minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
+                    }
+                    if (movementMultiplier == 2)
+                    {
+                        maximumScale = new Vector3(sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2]);
+                        minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
+                    }
+
+                }
+
+                targetvec = new Vector3(sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1]);
+
+                //Scales the player to the appropriate size
+                /*while (controllingTransform.localScale != targetvec)
+                {
+                    controllingTransform.localScale += (Vector3.one * Time.deltaTime * Mathf.Sign(distanceDelta) * scaleMultiplier);
+                    controllingTransform.localScale = new Vector3(Mathf.Clamp(controllingTransform.localScale.x, minimumScale.x, maximumScale.x), Mathf.Clamp(controllingTransform.localScale.y, minimumScale.y, maximumScale.y), Mathf.Clamp(controllingTransform.localScale.z, minimumScale.z, maximumScale.z));
+                }*/
+
+                //Enabling this sets the size to one of the 4 preset sizes
+                controllingTransform.localScale = targetvec;
+
             }
             previousControllerDistance = currentDistance;
+            movementActivated = true;
         }
     }
 }
