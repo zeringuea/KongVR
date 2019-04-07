@@ -6,8 +6,11 @@
     {
         public VRTK_InteractableObject linkedObject;
         public float spinSpeed = 50f;
-        
-        protected bool spinning, isHeld;
+
+        public AudioClip EatingClip;
+        public AudioSource audioSource;
+
+        protected bool spinning, isHeld, eating = false;
 
         protected virtual void OnEnable()
         {
@@ -40,6 +43,10 @@
             {
                 transform.Rotate(new Vector3(0f, spinSpeed * Time.deltaTime, 0f));
             }
+            if (eating == true && audioSource.isPlaying == false)
+            {
+                Destroy(gameObject);
+            }
         }
 
         public bool IsHeld()
@@ -71,6 +78,14 @@
         {
             //spinning = false;
             Debug.Log("Banana unused");
+        }
+
+        public void Eat()
+        {
+            audioSource.clip = EatingClip;
+            audioSource.Play();
+            eating = true;
+            GetComponent<MeshRenderer>().enabled = false;
         }
     }
 }

@@ -16,7 +16,7 @@ public class PlayerHeadController : MonoBehaviour
     {
         if (other.CompareTag("Food") && other.GetComponent<VRTK.InteractableBanana>().IsHeld())
         {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<VRTK.InteractableBanana>().Eat();
             foodCounter++;
             Debug.Log("Food Count Up: " + foodCounter);
         }

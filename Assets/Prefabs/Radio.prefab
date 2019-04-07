@@ -232,9 +232,9 @@ MonoBehaviour:
   gainDb: -10
   nearFieldEffectEnabled: 0
   nearFieldEffectGain: 1
-  occlusionEnabled: 0
+  occlusionEnabled: 1
   occlusionIntensity: 1
-  quality: 2
+  quality: 1
 --- !u!1 &1605390188
 GameObject:
   m_ObjectHideFlags: 0

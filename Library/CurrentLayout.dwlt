@@ -112,9 +112,9 @@ MonoBehaviour:
     width: 1463
     height: 691
   m_MinSize: {x: 679, y: 498}
-  m_MaxSize: {x: 18002, y: 14048}
+  m_MaxSize: {x: 18006, y: 14048}
   vertical: 0
-  controlID: 107
+  controlID: 137
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,9 +137,9 @@ MonoBehaviour:
     width: 1029
     height: 691
   m_MinSize: {x: 404, y: 498}
-  m_MaxSize: {x: 14002, y: 14048}
+  m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
-  controlID: 108
+  controlID: 138
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 224}
   m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
-  controlID: 109
+  controlID: 139
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -240,10 +240,10 @@ MonoBehaviour:
     y: 413
     width: 1029
     height: 278
-  m_MinSize: {x: 332, y: 274}
-  m_MaxSize: {x: 14002, y: 10024}
+  m_MinSize: {x: 336, y: 274}
+  m_MaxSize: {x: 14006, y: 10024}
   vertical: 0
-  controlID: 12
+  controlID: 55
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -290,8 +290,8 @@ MonoBehaviour:
     y: 0
     width: 576
     height: 278
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 104, y: 124}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -493,7 +493,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d4bfffff18d1ffffb2d3ffff72ddffff7cdeffffa2e0ffffd8f0ffffcefbffffcc200000e6460000427f0000667f00001880000054850000728700001e8d0000788d00007a8e0000848e0000
+      m_ExpandedIDs: 14eaffff1eebffff943f0000ca3f000018400000244100005a41000064410000b4410000ea410000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -548,9 +548,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.306242, y: 0.76975185, z: -0.46753636}
+    m_Target: {x: -1.8339412, y: 1.4191388, z: -2.5820615}
     speed: 2
-    m_Value: {x: 2.306242, y: 0.76975185, z: -0.46753636}
+    m_Value: {x: -1.8339412, y: 1.4191388, z: -2.5820615}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -578,13 +578,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.13395448, y: -0.2967509, z: 0.0421016, w: 0.94457537}
+    m_Target: {x: 0.06643178, y: -0.80823594, z: 0.092978805, w: 0.57766646}
     speed: 2
-    m_Value: {x: 0.13395448, y: -0.2967509, z: 0.0421016, w: 0.94457537}
+    m_Value: {x: 0.06643171, y: -0.80823505, z: 0.09297871, w: 0.57766587}
   m_Size:
-    m_Target: 1.7252507
+    m_Target: 15.269331
     speed: 2
-    m_Value: 1.7252507
+    m_Value: 15.269331
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -634,20 +634,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\harri\Documents\Unity\Projects\KongVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 163}
-    m_SelectedIDs: f4180000
-    m_LastClickedID: 6388
-    m_ExpandedIDs: 00000000e40e00003e1100004a14000062140000a81700007e190000581a00009c1a0000aa1a0000ba3f000000ca9a3b
+    scrollPos: {x: 0, y: 51}
+    m_SelectedIDs: 3e350000
+    m_LastClickedID: 13630
+    m_ExpandedIDs: 00000000c42f00001c320000263500006e3800004a3a0000243b0000683b00009644000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -675,7 +675,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e40e00003e1100004a14000062140000a81700007e190000581a00009c1a0000aa1a0000ba3f0000
+    m_ExpandedIDs: 00000000c42f00001c320000263500003e3500006e3800004a3a0000243b0000683b0000763b000096440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -902,7 +902,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 36120
+  m_LastSelectedObjectID: -97070
 --- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
