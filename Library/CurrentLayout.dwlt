@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1463
     height: 741
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -111,7 +111,7 @@ MonoBehaviour:
     y: 30
     width: 1463
     height: 691
-  m_MinSize: {x: 681, y: 498}
+  m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
   controlID: 27
@@ -136,7 +136,7 @@ MonoBehaviour:
     y: 0
     width: 1068
     height: 691
-  m_MinSize: {x: 404, y: 498}
+  m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
   controlID: 28
@@ -161,8 +161,8 @@ MonoBehaviour:
     y: 0
     width: 1068
     height: 417
-  m_MinSize: {x: 404, y: 224}
-  m_MaxSize: {x: 8004, y: 4024}
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
   controlID: 29
 --- !u!114 &8
@@ -184,8 +184,8 @@ MonoBehaviour:
     y: 0
     width: 364
     height: 417
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 336, y: 274}
   m_MaxSize: {x: 14006, y: 10024}
   vertical: 0
-  controlID: 81
+  controlID: 91
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -387,10 +387,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -200.00002
-    m_HBaseRangeMax: 200.00002
-    m_VBaseRangeMin: -108.571434
-    m_VBaseRangeMax: 108.571434
+    m_HBaseRangeMin: -350
+    m_HBaseRangeMax: 350
+    m_VBaseRangeMin: -190
+    m_VBaseRangeMax: 190
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 1
-  m_LastWindowPixelSize: {x: 1225, y: 694.75}
+  m_LastWindowPixelSize: {x: 700, y: 397}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -493,7 +493,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f4c9fdff4ccdfdffa4d5fdff14e3fdffe86dffff2477ffff12a9ffff44a9ffff06b0ffff1ed7ffff26d7ffff2ad7ffff2cd7ffff2ed7ffff34d7ffff8ee1ffff14e2ffff18e2ffff1ae2ffff24e2ffffdce4ffff80f7ffffcefbffffd447000092490000604a00001a4c0000744c0000ec4e00004c540000785500008a550000f256000008670000
+      m_ExpandedIDs: cefbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -578,7 +578,7 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.09736475, y: 0.8574093, z: -0.17626593, w: -0.4736076}
+    m_Target: {x: -0.097364545, y: 0.85740745, z: -0.17626555, w: -0.4736066}
     speed: 2
     m_Value: {x: -0.097364545, y: 0.85740745, z: -0.17626555, w: -0.4736066}
   m_Size:
@@ -634,20 +634,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Harrison's Scenes
+    - Assets/Prefabs/CollectiblePlanes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes/Harrison's Scenes
+  - Assets/Prefabs/CollectiblePlanes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\harri\Documents\Unity\Projects\KongVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: dc720100
-    m_LastClickedID: 94940
-    m_ExpandedIDs: 0000000026100000ea100000f01000007e120000fa1200002614000078140000d014000048150000fe1500003c1700005a170000381a0000ca1b0000e41c0000661d0000521e0000841f0000d21f0000f41f0000e2200000584600002e8d0000c0900000c690000000ca9a3b
+    m_SelectedIDs: 6c150000
+    m_LastClickedID: 5484
+    m_ExpandedIDs: 0000000034100000fc1000000211000094120000121300004214000094140000ee1400006e150000241600006c17000090170000721a00000c1c0000221c00002c1d0000b01d0000a41e0000d81f000026200000482000003a21000044210000a8470000aa47000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -675,7 +675,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000026100000ea100000fa12000026140000781400003c170000ca1b0000661d0000521e0000841f0000d21f000058460000
+    m_ExpandedIDs: 0000000034100000fc1000000211000094120000121300004214000094140000ee1400006e150000241600006c17000090170000721a00000c1c0000221c00002c1d0000b01d0000a41e0000d81f000026200000482000003a21000044210000a8470000aa470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
