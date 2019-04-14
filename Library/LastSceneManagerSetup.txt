@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/hwkerr-Interaction.unity
+- path: Assets/Scenes/Harrison's Scenes/InteractionDemo.unity
   isLoaded: 1
   isActive: 1
