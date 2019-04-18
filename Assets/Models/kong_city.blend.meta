@@ -1,0 +1,340 @@
+fileFormatVersion: 2
+guid: 3b858c3a44536ba41a1731b063419aa5
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Airduct_House
+    100002: Arrows_House
+    100004: Balcony_Door_House
+    100006: Ceiling_House
+    100008: Chimney_Tower
+    100010: Closed_House
+    100012: Cracked_Door_House
+    100014: Door
+    100016: Double_Door
+    100018: Eraser_Cube
+    100020: Grips
+    100022: Grips_001
+    100024: Grips_002
+    100026: Grips_003
+    100028: Grips_004
+    100030: Grips_005
+    100032: Grips_006
+    100034: Grips_007
+    100036: Grips_008
+    100038: Grips_009
+    100040: Grips_010
+    100042: Grips_011
+    100044: Grips_012
+    100046: //RootNode
+    100048: Monument
+    100050: Open_Door
+    100052: Open_Double_Door
+    100054: Pipe_House
+    100056: Sandwich
+    100058: Sharp_House
+    100060: Small_Door_House
+    100062: Stack_House
+    100064: Ground
+    400000: Airduct_House
+    400002: Arrows_House
+    400004: Balcony_Door_House
+    400006: Ceiling_House
+    400008: Chimney_Tower
+    400010: Closed_House
+    400012: Cracked_Door_House
+    400014: Door
+    400016: Double_Door
+    400018: Eraser_Cube
+    400020: Grips
+    400022: Grips_001
+    400024: Grips_002
+    400026: Grips_003
+    400028: Grips_004
+    400030: Grips_005
+    400032: Grips_006
+    400034: Grips_007
+    400036: Grips_008
+    400038: Grips_009
+    400040: Grips_010
+    400042: Grips_011
+    400044: Grips_012
+    400046: //RootNode
+    400048: Monument
+    400050: Open_Door
+    400052: Open_Double_Door
+    400054: Pipe_House
+    400056: Sandwich
+    400058: Sharp_House
+    400060: Small_Door_House
+    400062: Stack_House
+    400064: Ground
+    2100000: Black_Metal
+    2100002: Glass
+    2100004: Floor__tiles_jpg
+    2100006: Concrete
+    2100008: White_Metal
+    2100010: Hard_Glass
+    2100012: Airduct
+    2100014: Concrete__concrete_normal_jpg
+    2100016: Black_Metal__metal_normal_png
+    2100018: Pure_Black
+    2100020: Black_Metal__black_metal_jpg
+    2100022: Grass
+    2100024: Asphalt
+    2100026: White_Concrete
+    2300000: Airduct_House
+    2300002: Arrows_House
+    2300004: Balcony_Door_House
+    2300006: Ceiling_House
+    2300008: Chimney_Tower
+    2300010: Closed_House
+    2300012: Cracked_Door_House
+    2300014: Door
+    2300016: Double_Door
+    2300018: Eraser_Cube
+    2300020: Grips
+    2300022: Grips_001
+    2300024: Grips_002
+    2300026: Grips_003
+    2300028: Grips_004
+    2300030: Grips_005
+    2300032: Grips_006
+    2300034: Grips_007
+    2300036: Grips_008
+    2300038: Grips_009
+    2300040: Grips_010
+    2300042: Grips_011
+    2300044: Grips_012
+    2300046: Monument
+    2300048: Open_Door
+    2300050: Open_Double_Door
+    2300052: Pipe_House
+    2300054: Sandwich
+    2300056: Sharp_House
+    2300058: Small_Door_House
+    2300060: Stack_House
+    2300062: Ground
+    3300000: Airduct_House
+    3300002: Arrows_House
+    3300004: Balcony_Door_House
+    3300006: Ceiling_House
+    3300008: Chimney_Tower
+    3300010: Closed_House
+    3300012: Cracked_Door_House
+    3300014: Door
+    3300016: Double_Door
+    3300018: Eraser_Cube
+    3300020: Grips
+    3300022: Grips_001
+    3300024: Grips_002
+    3300026: Grips_003
+    3300028: Grips_004
+    3300030: Grips_005
+    3300032: Grips_006
+    3300034: Grips_007
+    3300036: Grips_008
+    3300038: Grips_009
+    3300040: Grips_010
+    3300042: Grips_011
+    3300044: Grips_012
+    3300046: Monument
+    3300048: Open_Door
+    3300050: Open_Double_Door
+    3300052: Pipe_House
+    3300054: Sandwich
+    3300056: Sharp_House
+    3300058: Small_Door_House
+    3300060: Stack_House
+    3300062: Ground
+    4300000: Ceiling_House
+    4300002: Grips_012
+    4300004: Sandwich
+    4300006: Grips_011
+    4300008: Small_Door_House
+    4300010: Grips_010
+    4300012: Arrows_House
+    4300014: Grips_009
+    4300016: Pipe_House
+    4300018: Grips_008
+    4300020: Sharp_House
+    4300022: Grips
+    4300024: Airduct_House
+    4300026: Grips_005
+    4300028: Stack_House
+    4300030: Grips_004
+    4300032: Eraser_Cube
+    4300034: Balcony_Door_House
+    4300036: Grips_006
+    4300038: Cracked_Door_House
+    4300040: Grips_002
+    4300042: Chimney_Tower
+    4300044: Grips_001
+    4300046: Closed_House
+    4300048: Grips_003
+    4300050: Open_Double_Door
+    4300052: Double_Door
+    4300054: Open_Door
+    4300056: Door
+    4300058: Monument
+    4300060: Grips_007
+    4300062: Ground
+    7400000: Default Take
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Airduct
+    second: {fileID: 2100000, guid: a02359bd693faa94e8fd04c24a3a8631, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Asphalt
+    second: {fileID: 2100000, guid: 6e341b3628d3eab468427eef30fbfbd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Metal
+    second: {fileID: 2100000, guid: 931d193da9e627e4da5d25917f6de62a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Metal__black_metal_jpg
+    second: {fileID: 2100000, guid: 1ae527f3b4759d9428be1f0ee10b9239, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Metal__metal_normal_png
+    second: {fileID: 2100000, guid: 46eefae023eecc04c9e1901c5990a25d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete
+    second: {fileID: 2100000, guid: 5574a2cf143551e4ca3ef356c9f1b2db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete__concrete_normal_jpg
+    second: {fileID: 2100000, guid: 72bae586d1172424ca41323f82161e06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor__tiles_jpg
+    second: {fileID: 2100000, guid: cc8d42fcf59655949976767e28e19434, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 862b8a2ac0ed5a441a19d1cdc314935a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass
+    second: {fileID: 2100000, guid: 635331a5af7877542818f3d6956ce833, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hard_Glass
+    second: {fileID: 2100000, guid: 802524307ac1fe242b74eaf4a066384f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pure_Black
+    second: {fileID: 2100000, guid: 0fbb376940dc4ff4c8d06e7663350031, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White_Concrete
+    second: {fileID: 2100000, guid: daf1b76e41db4c4459517abf78695bd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White_Metal
+    second: {fileID: 2100000, guid: c3271a221bbf40645a40052f9eb503bc, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
