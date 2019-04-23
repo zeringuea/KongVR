@@ -5,7 +5,8 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     public Vector3 closedPosition, openedPosition;
-    public float speed;
+    public Quaternion closedRotation, openedRotation;
+    public float moveSpeed;
     public enum ToggleMode { Proximity, Spacebar, CodeOnly };
     // Proximity requires an additional collider with trigger enabled, toggles open when player is in proximity, false otherwise
     // Spacebar toggles when spacebar is pressed
@@ -19,6 +20,7 @@ public class DoorScript : MonoBehaviour
     void Start()
     {
         transform.position = closedPosition;
+        transform.rotation = closedRotation;
         open = false;
     }
 
@@ -39,9 +41,9 @@ public class DoorScript : MonoBehaviour
             StopCoroutine(currentCoroutine);
 
         if (open)
-            currentCoroutine = Move(closedPosition, speed);
+            currentCoroutine = Move(closedPosition, closedRotation, moveSpeed);
         else
-            currentCoroutine = Move(openedPosition, speed);
+            currentCoroutine = Move(openedPosition, openedRotation, moveSpeed);
         open = !open;
         StartCoroutine(currentCoroutine);
     }
@@ -51,7 +53,7 @@ public class DoorScript : MonoBehaviour
     {
         if (currentCoroutine != null)
             StopCoroutine(currentCoroutine);
-        currentCoroutine = Move(openedPosition, speed);
+        currentCoroutine = Move(openedPosition, openedRotation, moveSpeed);
         open = true;
         StartCoroutine(currentCoroutine);
     }
@@ -61,16 +63,17 @@ public class DoorScript : MonoBehaviour
     {
         if (currentCoroutine != null)
             StopCoroutine(currentCoroutine);
-        currentCoroutine = Move(closedPosition, speed);
+        currentCoroutine = Move(closedPosition, closedRotation, moveSpeed);
         open = false;
         StartCoroutine(currentCoroutine);
     }
 
-    private IEnumerator Move(Vector3 destination, float speed)
+    private IEnumerator Move(Vector3 destination, Quaternion rotation, float moveSpeed)
     {
         while (transform.position != destination)
         {
-            transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, destination, moveSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, moveSpeed * Time.deltaTime);
             yield return null;
         }
     }
