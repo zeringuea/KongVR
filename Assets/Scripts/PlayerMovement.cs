@@ -495,7 +495,10 @@ namespace VRTK
 
                 targetvec = new Vector3(sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1]);
 
-                //ScaleAround(controllingTransform,,targetvec);
+                //GameObject Rig = GameObject.Find("SteamVR/[CameraRig]");
+                //Vector3 Scale = Rig.transform.position;
+
+                //ScaleAround(controllingTransform, Scale, targetvec);
 
                 //Scales the player to the appropriate size
                 /*while (controllingTransform.localScale != targetvec)
@@ -505,7 +508,7 @@ namespace VRTK
                 }*/
                 
                 //Enabling this sets the size to one of the 4 preset sizes
-                controllingTransform.localScale = targetvec;
+                //controllingTransform.localScale = targetvec;
                 
             }
             previousControllerDistance = currentDistance;
@@ -514,7 +517,7 @@ namespace VRTK
 
 
         //Check with Dr. Robb on where the pivot should be selected from
-        public void ScaleAround(Transform target, Vector3 pivot, Vector3 newScale)
+        /*public void ScaleAround(Transform target, Vector3 pivot, Vector3 newScale)
         {
             Vector3 A = target.localPosition;
             Vector3 B = pivot;
@@ -529,6 +532,6 @@ namespace VRTK
             // finally, actually perform the scale/translation
             target.localScale = newScale;
             target.localPosition = FP;
-        }
+        }*/
     }
 }
