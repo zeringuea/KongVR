@@ -13,16 +13,18 @@ namespace VRTK
     ///   > If both controllers are being used to track the rotation mechanism, then the rotation will be based on pushing one controller forward, whilst pulling the other controller backwards.
     /// </remarks>
     [AddComponentMenu("VRTK/Scripts/Locomotion/VRTK_DragWorld")]
-    public class VRTK_DragWorld : MonoBehaviour
+    public class PlayerMovement : MonoBehaviour
     {
         //Important Notes:
         //Scale state is used to determine if the player is: Small(4), Normal(3), Large(2), THICC(1)
         //Sizes for each: Small(.2), Normal(1), Large(2.5), THICC(7.5)
         //Movement Multipler: Small(4), Normal(3), Large(2), THICC(1)
         //ScaleState also equals speed
-        public float[] sizes = { 7.5f, 2.5f, 1f, .2f };
+        public float[] sizes = {7.5f, 2.5f, 1f, .2f};
         private bool scalelock;
-
+        public bool minlimit = false;
+        public bool normlimit = false;
+        public bool largelimit = false;
         /// <summary>
         /// The controller on which to determine as the activation requirement for the control mechanism.
         /// </summary>
@@ -436,7 +438,7 @@ namespace VRTK
             {
                 return;
             }
-
+            
             float currentDistance = GetControllerDistance();
             float distanceDelta = currentDistance - previousControllerDistance;
             if (Mathf.Abs(distanceDelta) >= scaleActivationThreshold && scalelock == false)
@@ -448,20 +450,21 @@ namespace VRTK
                 //Scale Up
                 if (distanceDelta > 0)
                 {
-                    if (movementMultiplier > 1)
-                        movementMultiplier--;
-                    if (movementMultiplier == 1)
+                    if (movementMultiplier == 2 && largelimit == false)
                     {
+                        movementMultiplier--;
                         maximumScale = new Vector3(sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1]);
                         minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
                     }
-                    if (movementMultiplier == 2)
+                    if (movementMultiplier == 3 && normlimit == false)
                     {
+                        movementMultiplier--;
                         maximumScale = new Vector3(sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2]);
                         minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
                     }
-                    if (movementMultiplier == 3)
+                    if (movementMultiplier == 4 && minlimit == false)
                     {
+                        movementMultiplier--;
                         maximumScale = new Vector3(sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2]);
                         minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
                     }
@@ -492,19 +495,40 @@ namespace VRTK
 
                 targetvec = new Vector3(sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1]);
 
+                //ScaleAround(controllingTransform,,targetvec);
+
                 //Scales the player to the appropriate size
                 /*while (controllingTransform.localScale != targetvec)
                 {
                     controllingTransform.localScale += (Vector3.one * Time.deltaTime * Mathf.Sign(distanceDelta) * scaleMultiplier);
                     controllingTransform.localScale = new Vector3(Mathf.Clamp(controllingTransform.localScale.x, minimumScale.x, maximumScale.x), Mathf.Clamp(controllingTransform.localScale.y, minimumScale.y, maximumScale.y), Mathf.Clamp(controllingTransform.localScale.z, minimumScale.z, maximumScale.z));
                 }*/
-
+                
                 //Enabling this sets the size to one of the 4 preset sizes
                 controllingTransform.localScale = targetvec;
-
+                
             }
             previousControllerDistance = currentDistance;
             movementActivated = true;
+        }
+
+
+        //Check with Dr. Robb on where the pivot should be selected from
+        public void ScaleAround(Transform target, Vector3 pivot, Vector3 newScale)
+        {
+            Vector3 A = target.localPosition;
+            Vector3 B = pivot;
+
+            Vector3 C = A - B; // diff from object pivot to desired pivot/origin
+
+            float RS = newScale.x / target.localScale.x; // relative scale factor
+
+            // calc final position post-scale
+            Vector3 FP = B + C * RS;
+
+            // finally, actually perform the scale/translation
+            target.localScale = newScale;
+            target.localPosition = FP;
         }
     }
 }
