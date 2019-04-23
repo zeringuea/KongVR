@@ -5,7 +5,7 @@
     public class InteractablePlane : MonoBehaviour
     {
         public VRTK_InteractableObject linkedObject;
-        public float spinSpeed = 50f;
+        private float spinSpeed = 0f;
 
         protected bool spinning, isHeld;
 
