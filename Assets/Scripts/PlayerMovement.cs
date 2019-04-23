@@ -25,6 +25,7 @@ namespace VRTK
         public bool minlimit = false;
         public bool normlimit = false;
         public bool largelimit = false;
+		private VRTK_InteractableObject[] heavies;
         /// <summary>
         /// The controller on which to determine as the activation requirement for the control mechanism.
         /// </summary>
@@ -176,6 +177,12 @@ namespace VRTK
             scaleActivated = false;
             ManageActivationListeners(true);
             SetControllerReferences();
+			GameObject[] heavyObs = GameObject.FindGameObjectsWithTag ("HeavyPickup");
+			heavies = new VRTK_InteractableObject[heavyObs.Length];
+			for (int i = 0; i < heavyObs.Length; i++)
+			{
+				heavies [i] = heavyObs [i].GetComponent (typeof(VRTK_InteractableObject)) as VRTK_InteractableObject;
+			}
         }
 
         protected virtual void OnDisable()
@@ -455,6 +462,10 @@ namespace VRTK
                         movementMultiplier--;
                         maximumScale = new Vector3(sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1]);
                         minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
+						foreach (VRTK_InteractableObject heavy in heavies)
+						{
+							heavy.enabled = true;
+						}
                     }
                     if (movementMultiplier == 3 && normlimit == false)
                     {
@@ -489,6 +500,10 @@ namespace VRTK
                     {
                         maximumScale = new Vector3(sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2], sizes[(int)movementMultiplier - 2]);
                         minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
+						foreach (VRTK_InteractableObject heavy in heavies)
+						{
+							heavy.enabled = false;
+						}
                     }
 
                 }
