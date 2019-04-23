@@ -36,6 +36,8 @@ ModelImporter:
     100060: Small_Door_House
     100062: Stack_House
     100064: Ground
+    100066: Grips_013
+    100068: Skyscraper
     400000: Airduct_House
     400002: Arrows_House
     400004: Balcony_Door_House
@@ -69,6 +71,8 @@ ModelImporter:
     400060: Small_Door_House
     400062: Stack_House
     400064: Ground
+    400066: Grips_013
+    400068: Skyscraper
     2100000: Black_Metal
     2100002: Glass
     2100004: Floor__tiles_jpg
@@ -83,6 +87,9 @@ ModelImporter:
     2100022: Grass
     2100024: Asphalt
     2100026: White_Concrete
+    2100028: Floor
+    2100030: Airduct__vent_tiles_jpg
+    2100032: Indoor_Wall
     2300000: Airduct_House
     2300002: Arrows_House
     2300004: Balcony_Door_House
@@ -115,6 +122,8 @@ ModelImporter:
     2300058: Small_Door_House
     2300060: Stack_House
     2300062: Ground
+    2300064: Grips_013
+    2300066: Skyscraper
     3300000: Airduct_House
     3300002: Arrows_House
     3300004: Balcony_Door_House
@@ -147,6 +156,8 @@ ModelImporter:
     3300058: Small_Door_House
     3300060: Stack_House
     3300062: Ground
+    3300064: Grips_013
+    3300066: Skyscraper
     4300000: Ceiling_House
     4300002: Grips_012
     4300004: Sandwich
@@ -179,6 +190,8 @@ ModelImporter:
     4300058: Monument
     4300060: Grips_007
     4300062: Ground
+    4300064: Skyscraper
+    4300066: Grips_013
     7400000: Default Take
     9500000: //RootNode
     2186277476908879412: ImportLogs
@@ -188,6 +201,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Airduct
     second: {fileID: 2100000, guid: a02359bd693faa94e8fd04c24a3a8631, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Airduct__vent_tiles_jpg
+    second: {fileID: 2100000, guid: ca6ff59642b4ad846ad334aeb1913657, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -221,6 +239,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 195a44df516e7324494ae0dc60b41a10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Floor__tiles_jpg
     second: {fileID: 2100000, guid: cc8d42fcf59655949976767e28e19434, type: 2}
   - first:
@@ -238,6 +261,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Hard_Glass
     second: {fileID: 2100000, guid: 802524307ac1fe242b74eaf4a066384f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Indoor_Wall
+    second: {fileID: 2100000, guid: dc823d03fbad8e54ebc893be5b92523f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
