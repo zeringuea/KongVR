@@ -10,6 +10,8 @@
         public AudioClip EatingClip;
         public AudioSource audioSource;
 
+        public string teleportToScene = "";
+
         protected bool spinning, isHeld, eating = false;
 
         protected virtual void OnEnable()
@@ -86,6 +88,8 @@
             audioSource.Play();
             eating = true;
             GetComponent<MeshRenderer>().enabled = false;
+            if (teleportToScene != "")
+                UnityEngine.SceneManagement.SceneManager.LoadScene(teleportToScene);
         }
     }
 }
