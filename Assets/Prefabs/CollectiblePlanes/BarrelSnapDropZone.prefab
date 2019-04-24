@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa31935730602684ca098655260a7c33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightObjectPrefab: {fileID: 100000, guid: 40c817a6a026da4488f32e9b69bf0911,
+  highlightObjectPrefab: {fileID: 2274827104962417454, guid: 22efc840cb9d19844b0b85ffb37245c9,
     type: 3}
   snapType: 0
   snapDuration: 0
@@ -90,7 +90,7 @@ MonoBehaviour:
   active: 1
   unhighlightOnDisable: 1
   emissionDarken: 50
-  customMaterial: {fileID: 2100000, guid: 443fa5d0298f563439ddbcaae62a2d7c, type: 2}
+  customMaterial: {fileID: 2100000, guid: 4545fe31481d6064dbd1cc4344d3c4fc, type: 2}
 --- !u!114 &8490044684733224714
 MonoBehaviour:
   m_ObjectHideFlags: 0
