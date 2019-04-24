@@ -4,4 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 14564556e30aaa2459be3930a0dbd8b4
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: fb6018067082ca14e976fba2d9757366
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: e4a7fbcd4aacbdb47b56e2cd3a19e513
+  - enabled: 1
+    path: Assets/Scenes/KongCity.unity
+    guid: b9bbfe692f0bb354e95a87f384226611
+  m_configObjects: {}

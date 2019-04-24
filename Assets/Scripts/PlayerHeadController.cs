@@ -21,4 +21,9 @@ public class PlayerHeadController : MonoBehaviour
             Debug.Log("Food Count Up: " + foodCounter);
         }
     }
+
+    public int getFoodCounter()
+    {
+        return foodCounter;
+    }
 }

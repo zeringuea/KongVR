@@ -499,7 +499,7 @@ namespace VRTK
                         minimumScale = new Vector3(sizes[(int)movementMultiplier], sizes[(int)movementMultiplier], sizes[(int)movementMultiplier]);
 						foreach (VRTK_InteractableObject heavy in heavies)
 						{
-							heavy.enabled = false;
+							heavy.enabled = false; 
 						}
                     }
 

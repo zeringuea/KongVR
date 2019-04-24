@@ -16,9 +16,16 @@ public class DoorScript : MonoBehaviour
     private IEnumerator currentCoroutine;
     private bool open;
 
+    public enum LevelMode { Bananas, Barrels };
+    public LevelMode levelMode;
+
+    public PlayerHeadController playerHead;
+    public int bananas;
+
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(SetPlayerHead());
         transform.position = closedPosition;
         transform.rotation = closedRotation;
         open = false;
@@ -78,11 +85,16 @@ public class DoorScript : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (toggleMode == ToggleMode.Proximity && other.CompareTag("Head"))
         {
             Open();
+        }
+        if (levelMode == LevelMode.Bananas && playerHead.getFoodCounter() == bananas)
+        {
+            //wait, then teleport home
         }
     }
 
@@ -92,5 +104,18 @@ public class DoorScript : MonoBehaviour
         {
             Close();
         }
+    }
+
+    private IEnumerator SetPlayerHead()
+    {
+        GameObject[] headObjs = GameObject.FindGameObjectsWithTag("Head");
+        foreach (GameObject obj in headObjs)
+        {
+            Debug.Log(obj.name);
+            PlayerHeadController player = obj.GetComponent<PlayerHeadController>();
+            if (player.enabled) playerHead = player;
+        }
+        if (playerHead == null) Debug.Log("DoorScript: player is null");
+        yield return new WaitForSeconds(0.5f);
     }
 }
