@@ -81,6 +81,7 @@
     <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioRoomManager.cs" />
     <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioSource.cs" />
     <Compile Include="Assets\Scripts\DoorScript.cs" />
+    <Compile Include="Assets\Scripts\DoorScriptL1.cs" />
     <Compile Include="Assets\Scripts\InteractableBanana.cs" />
     <Compile Include="Assets\Scripts\InteractablePlane.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
