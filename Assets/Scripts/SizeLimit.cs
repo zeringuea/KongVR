@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class SizeLimit : MonoBehaviour
 {
@@ -9,32 +10,33 @@ public class SizeLimit : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
     }
 
     // Update is called once per frame
     void update()
     {
-
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (name == "SmallLimit")
-            Script.setSmallTrue();
-        else if (name == "MediumLimit")
-            Script.setMediumTrue();
-        else if (name == "LargeLimit")
-            Script.setLargeTrue();
+            if (tag == "Smalltag")
+                Script.setSmallTrue();
+            else if (tag == "Mediumtag")
+                Script.setMediumTrue();
+            else if (tag == "Largetag")
+                Script.setLargeTrue();
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (name == "SmallLimit")
-            Script.setSmallFalse();
-        else if (name == "MediumLimit")
-            Script.setMediumFalse();
-        else if (name == "LargeLimit")
-            Script.setLargeFalse();
+            if (tag == "Smalltag")
+                Script.setSmallFalse();
+            else if (tag == "Mediumtag")
+                Script.setMediumFalse();
+            else if (tag == "Largetag")
+                Script.setLargeFalse();
     }
 }
+
+
