@@ -530,6 +530,41 @@ namespace VRTK
             movementActivated = true;
         }
 
+        public void setSmallTrue()
+        {
+            minlimit = true;
+            normlimit = true;
+            largelimit = true;
+        }
+
+        public void setSmallFalse()
+        {
+            minlimit = false;
+            normlimit = false;
+            largelimit = false;
+        }
+
+        public void setMediumTrue()
+        {
+            normlimit = true;
+            largelimit = true;
+        }
+
+        public void setMediumFalse()
+        {
+            normlimit = false;
+            largelimit = false;
+        }
+
+        public void setLargeTrue()
+        {
+            largelimit = true;
+        }
+
+        public void setLargeFalse()
+        {
+            largelimit = false;
+        }
 
         //Check with Dr. Robb on where the pivot should be selected from
         /*public void ScaleAround(Transform target, Vector3 pivot, Vector3 newScale)
