@@ -523,7 +523,7 @@ namespace VRTK
                 }*/
                 
                 //Enabling this sets the size to one of the 4 preset sizes
-                //controllingTransform.localScale = targetvec;
+                controllingTransform.localScale = targetvec;
                 
             }
             previousControllerDistance = currentDistance;
