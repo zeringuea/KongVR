@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 94918090300197452}
   - component: {fileID: 4992390566238653697}
   - component: {fileID: 6975876414970553500}
-  - component: {fileID: 4492293465302467925}
   m_Layer: 0
   m_Name: MediumLimit
-  m_TagString: Smalltag
+  m_TagString: MediumTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,47 +105,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Script: {fileID: 0}
---- !u!114 &4492293465302467925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242768919129202838}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c33a119a38eea84c85a9db1acc58376, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sizes:
-  - 7.5
-  - 2.5
-  - 1
-  - 0.2
-  minlimit: 0
-  normlimit: 0
-  largelimit: 0
-  movementActivationButton: 7
-  movementActivationRequirement: 4
-  movementTrackingController: 3
-  movementMultiplier: 3
-  movementPositionLock:
-    xState: 0
-    yState: 1
-    zState: 0
-  rotationActivationButton: 7
-  rotationActivationRequirement: 5
-  rotationTrackingController: 3
-  rotationMultiplier: 0.75
-  rotationActivationThreshold: 0.1
-  scaleActivationButton: 3
-  scaleActivationRequirement: 5
-  scaleTrackingController: 3
-  scaleMultiplier: 3
-  scaleActivationThreshold: 0.002
-  minimumScale: {x: 0.2, y: 0.2, z: 0.2}
-  maximumScale: {x: 2.5, y: 2.5, z: 2.5}
-  targetvec: {x: 1, y: 1, z: 1}
-  controllingTransform: {fileID: 0}
-  useOffsetTransform: 1
-  offsetTransform: {fileID: 0}
