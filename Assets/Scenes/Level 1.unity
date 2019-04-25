@@ -336,7 +336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &54947063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,7 +1793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &283838560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2560,7 +2558,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &493186199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2574,7 +2571,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &493186200
 Transform:
   m_ObjectHideFlags: 0
@@ -4067,7 +4063,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &821194404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4868,7 +4863,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &993778641
 GameObject:
   m_ObjectHideFlags: 0
@@ -5470,6 +5464,7 @@ GameObject:
   - component: {fileID: 1111142251}
   - component: {fileID: 1111142253}
   - component: {fileID: 1111142252}
+  - component: {fileID: 1111142254}
   m_Layer: 0
   m_Name: HeadsetFade
   m_TagString: Untagged
@@ -5506,7 +5501,7 @@ MonoBehaviour:
   timeTillFade: 0
   blinkTransitionSpeed: 0.1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  targetListPolicy: {fileID: 0}
+  targetListPolicy: {fileID: 1111142254}
   headsetCollision: {fileID: 543763416}
   headsetFade: {fileID: 1111142253}
 --- !u!114 &1111142253
@@ -5521,6 +5516,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44596d094d0946345a7fc6688ba9c06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1111142254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111142250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed2aa1a29b92ca4f84a26a5f6e9218b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  operation: 0
+  checkType: 1
+  identifiers:
+  - Smalltag
+  - MediumTag
+  - Largetag
 --- !u!1 &1127248947
 GameObject:
   m_ObjectHideFlags: 0
@@ -6490,7 +6503,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1386886789
 GameObject:
   m_ObjectHideFlags: 0
@@ -6566,7 +6578,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1415662158
 GameObject:
   m_ObjectHideFlags: 0
@@ -6705,7 +6716,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1434188891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8462,7 +8472,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1610359999
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8572,7 +8581,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1623713815
 GameObject:
   m_ObjectHideFlags: 0
