@@ -1,6 +1,7 @@
 ﻿// Drag World|Locomotion|20150
 namespace VRTK
 {
+    using System.Collections;
     using UnityEngine;
     /// <summary>
     /// Provides the ability to move, rotate and scale the PlayArea by dragging the world with the controllers.
@@ -25,6 +26,7 @@ namespace VRTK
         public bool minlimit = false;
         public bool normlimit = false;
         public bool largelimit = false;
+        public GameObject camerarig;
 		private VRTK_InteractableObject[] heavies;
         /// <summary>
         /// The controller on which to determine as the activation requirement for the control mechanism.
@@ -509,11 +511,10 @@ namespace VRTK
                 }
 
                 targetvec = new Vector3(sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1], sizes[(int)movementMultiplier - 1]);
+                //StartCoroutine(ScaleOverTime(controllingTransform.localPosition, targetvec));
+                Vector3 Scale = camerarig.transform.position;
 
-                //GameObject Rig = GameObject.Find("SteamVR/[CameraRig]");
-                //Vector3 Scale = Rig.transform.position;
-
-                //ScaleAround(controllingTransform, Scale, targetvec);
+                ScaleAround(camerarig.transform, controllingTransform.localScale, targetvec);
 
                 //Scales the player to the appropriate size
                 /*while (controllingTransform.localScale != targetvec)
@@ -571,8 +572,17 @@ namespace VRTK
             setSmallFalse();
         }
 
-        //Check with Dr. Robb on where the pivot should be selected from
-        /*public void ScaleAround(Transform target, Vector3 pivot, Vector3 newScale)
+        /*IEnumerator ScaleOverTime(Vector3 currentVector, Vector3 newVector)
+        {
+            do
+            {
+                currentVector = Vector3.Lerp(currentVector, newVector, 0.01F);
+                Debug.Log("Hello");
+            } while (currentVector != newVector);
+            yield return null;
+        }*/
+
+        public void ScaleAround(Transform target, Vector3 pivot, Vector3 newScale)
         {
             Vector3 A = target.localPosition;
             Vector3 B = pivot;
@@ -587,6 +597,7 @@ namespace VRTK
             // finally, actually perform the scale/translation
             target.localScale = newScale;
             target.localPosition = FP;
-        }*/
+
+        }
     }
 }
