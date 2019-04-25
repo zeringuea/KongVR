@@ -566,6 +566,11 @@ namespace VRTK
             largelimit = false;
         }
 
+        public void Start()
+        {
+            setSmallFalse();
+        }
+
         //Check with Dr. Robb on where the pivot should be selected from
         /*public void ScaleAround(Transform target, Vector3 pivot, Vector3 newScale)
         {
