@@ -188,8 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &50191650
 AudioSource:
   m_ObjectHideFlags: 0
@@ -296,8 +294,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &53637360
@@ -790,8 +786,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &238474189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,8 +1025,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &302216890
@@ -2815,6 +2807,7 @@ GameObject:
   - component: {fileID: 683511257}
   - component: {fileID: 683511259}
   - component: {fileID: 683511258}
+  - component: {fileID: 683511260}
   m_Layer: 0
   m_Name: HeadsetFade
   m_TagString: Untagged
@@ -2851,7 +2844,7 @@ MonoBehaviour:
   timeTillFade: 0
   blinkTransitionSpeed: 0.1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  targetListPolicy: {fileID: 0}
+  targetListPolicy: {fileID: 683511260}
   headsetCollision: {fileID: 430111570}
   headsetFade: {fileID: 683511259}
 --- !u!114 &683511259
@@ -2866,6 +2859,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44596d094d0946345a7fc6688ba9c06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &683511260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683511256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed2aa1a29b92ca4f84a26a5f6e9218b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  operation: 0
+  checkType: 1
+  identifiers:
+  - Smalltag
+  - MediumTag
+  - Largetag
 --- !u!1 &698430713
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,8 +4385,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1083941407
 GameObject:
   m_ObjectHideFlags: 0
@@ -4824,7 +4833,7 @@ Transform:
   - {fileID: 1009056838}
   - {fileID: 1927087192}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1213230514
 GameObject:
@@ -4856,8 +4865,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1213230516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4868,8 +4875,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1213230517
@@ -5434,7 +5439,7 @@ PrefabInstance:
     - target: {fileID: 8989517577871744491, guid: e46d94dd5a7e31e47a10463ff637dcdd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8989517577871744491, guid: e46d94dd5a7e31e47a10463ff637dcdd,
         type: 3}
@@ -8109,8 +8114,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1728153590
 GameObject:
   m_ObjectHideFlags: 0
@@ -8578,8 +8581,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1807016835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8633,8 +8634,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1900266674
@@ -9687,8 +9686,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2084203872
