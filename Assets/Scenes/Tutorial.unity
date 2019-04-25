@@ -1943,7 +1943,7 @@ MonoBehaviour:
   identifiers:
   - Smalltag
   - MediumTag
-  - LargeTag
+  - Largetag
 --- !u!1 &554594333
 GameObject:
   m_ObjectHideFlags: 0
