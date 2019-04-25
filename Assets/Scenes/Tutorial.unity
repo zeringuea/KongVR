@@ -1911,7 +1911,7 @@ MonoBehaviour:
   timeTillFade: 0
   blinkTransitionSpeed: 0.1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  targetListPolicy: {fileID: 0}
+  targetListPolicy: {fileID: 544950689}
   headsetCollision: {fileID: 1205838931}
   headsetFade: {fileID: 544950688}
 --- !u!114 &544950688
