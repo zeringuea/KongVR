@@ -27,9 +27,10 @@ public class DoorScript : MonoBehaviour
     public string teleportToScene = "";
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         planeCounter = 0;
+        //Debug.Log(planeCounter);
         StartCoroutine(SetPlayerHead());
         transform.position = closedPosition;
         transform.rotation = closedRotation;
@@ -102,7 +103,7 @@ public class DoorScript : MonoBehaviour
             Debug.Log("Teleporting to " + teleportToScene);
             UnityEngine.SceneManagement.SceneManager.LoadScene(teleportToScene);
         }
-        if (levelMode == LevelMode.Planes && planeCounter >= planes && teleportToScene != "")
+        if (levelMode == LevelMode.Planes && teleportToScene != "")
         {
             Debug.Log("Teleporting to " + teleportToScene);
             UnityEngine.SceneManagement.SceneManager.LoadScene(teleportToScene);
@@ -134,12 +135,12 @@ public class DoorScript : MonoBehaviour
     public void incPlaneCounter()
     {
         planeCounter++;
-        Debug.Log("Plane Count Up: " + planeCounter);
+        //Debug.Log("Plane Count Up: " + planeCounter);
     }
 
     public void decPlaneCounter()
     {
         planeCounter--;
-        Debug.Log("Plane Count Down: " + planeCounter);
+        //Debug.Log("Plane Count Down: " + planeCounter);
     }
 }

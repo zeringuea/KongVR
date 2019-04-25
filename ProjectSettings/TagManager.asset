@@ -14,6 +14,10 @@ TagManager:
   - Head
   - Food
   - SnapPlane
+  - MediumTag
+  - LargeTag
+  - Smalltag
+  - HeavyPickup
   layers:
   - Default
   - TransparentFX
