@@ -14,6 +14,10 @@ TagManager:
   - Head
   - Food
   - SnapPlane
+  - MediumTag
+  - Smalltag
+  - HeavyPickup
+  - SceneDoor
   layers:
   - Default
   - TransparentFX

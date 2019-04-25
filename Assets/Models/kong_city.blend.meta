@@ -38,6 +38,14 @@ ModelImporter:
     100064: Ground
     100066: Grips_013
     100068: Skyscraper
+    100070: Closed_Door
+    100072: Door_001
+    100074: Door_002
+    100076: Door_003
+    100078: Teleport
+    100080: Teleport_001
+    100082: Door_004
+    100084: Door_005
     400000: Airduct_House
     400002: Arrows_House
     400004: Balcony_Door_House
@@ -73,6 +81,14 @@ ModelImporter:
     400064: Ground
     400066: Grips_013
     400068: Skyscraper
+    400070: Closed_Door
+    400072: Door_001
+    400074: Door_002
+    400076: Door_003
+    400078: Teleport
+    400080: Teleport_001
+    400082: Door_004
+    400084: Door_005
     2100000: Black_Metal
     2100002: Glass
     2100004: Floor__tiles_jpg
@@ -124,6 +140,14 @@ ModelImporter:
     2300062: Ground
     2300064: Grips_013
     2300066: Skyscraper
+    2300068: Closed_Door
+    2300070: Door_001
+    2300072: Door_002
+    2300074: Door_003
+    2300076: Teleport
+    2300078: Teleport_001
+    2300080: Door_004
+    2300082: Door_005
     3300000: Airduct_House
     3300002: Arrows_House
     3300004: Balcony_Door_House
@@ -158,6 +182,14 @@ ModelImporter:
     3300062: Ground
     3300064: Grips_013
     3300066: Skyscraper
+    3300068: Closed_Door
+    3300070: Door_001
+    3300072: Door_002
+    3300074: Door_003
+    3300076: Teleport
+    3300078: Teleport_001
+    3300080: Door_004
+    3300082: Door_005
     4300000: Ceiling_House
     4300002: Grips_012
     4300004: Sandwich
@@ -192,6 +224,14 @@ ModelImporter:
     4300062: Ground
     4300064: Skyscraper
     4300066: Grips_013
+    4300068: Teleport_001
+    4300070: Door_001
+    4300072: Door_002
+    4300074: Door_003
+    4300076: Closed_Door
+    4300078: Teleport
+    4300080: Door_004
+    4300082: Door_005
     7400000: Default Take
     9500000: //RootNode
     2186277476908879412: ImportLogs
