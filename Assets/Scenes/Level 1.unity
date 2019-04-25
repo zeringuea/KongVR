@@ -285,13 +285,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closedPosition: {x: 4.69, y: 1.25, z: 10.5}
   openedPosition: {x: 4.69, y: 1.25, z: 10.5}
-  closedRotation: {x: 4.69, y: 4.69, z: 0, w: 0}
-  openedRotation: {x: 4.69, y: 4.69, z: 0, w: 0}
-  moveSpeed: 4.69
+  closedRotation: {x: 0, y: 0, z: 0, w: 0}
+  openedRotation: {x: 0, y: 0, z: 0, w: 0}
+  moveSpeed: 2
   toggleMode: 0
   levelMode: 0
   playerHead: {fileID: 0}
   bananas: 5
+  planes: 0
+  teleportToScene: KongCity
 --- !u!1 &38023205
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,8 +335,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &54947063
@@ -1793,8 +1793,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &283838560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2559,8 +2557,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &493186199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2571,8 +2567,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &493186200
@@ -4066,8 +4060,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &821194404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4865,8 +4857,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &993778641
@@ -6489,8 +6479,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1386886789
 GameObject:
   m_ObjectHideFlags: 0
@@ -6563,8 +6551,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1415662158
@@ -6702,8 +6688,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1434188891
@@ -8461,8 +8445,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1610359999
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8569,8 +8551,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1623713815

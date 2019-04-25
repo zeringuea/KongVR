@@ -16,15 +16,20 @@ public class DoorScript : MonoBehaviour
     private IEnumerator currentCoroutine;
     private bool open;
 
-    public enum LevelMode { Bananas, Barrels };
+    public enum LevelMode { Bananas, Planes };
     public LevelMode levelMode;
 
     public PlayerHeadController playerHead;
     public int bananas;
+    public int planes;
+    protected int planeCounter;
+
+    public string teleportToScene = "";
 
     // Start is called before the first frame update
     void Start()
     {
+        planeCounter = 0;
         StartCoroutine(SetPlayerHead());
         transform.position = closedPosition;
         transform.rotation = closedRotation;
@@ -92,9 +97,15 @@ public class DoorScript : MonoBehaviour
         {
             Open();
         }
-        if (levelMode == LevelMode.Bananas && playerHead.getFoodCounter() == bananas)
+        if (levelMode == LevelMode.Bananas && playerHead.getFoodCounter() >= bananas && teleportToScene != "")
         {
-            //wait, then teleport home
+            Debug.Log("Teleporting to " + teleportToScene);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(teleportToScene);
+        }
+        if (levelMode == LevelMode.Planes && planeCounter >= planes && teleportToScene != "")
+        {
+            Debug.Log("Teleporting to " + teleportToScene);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(teleportToScene);
         }
     }
 
@@ -108,14 +119,27 @@ public class DoorScript : MonoBehaviour
 
     private IEnumerator SetPlayerHead()
     {
-        GameObject[] headObjs = GameObject.FindGameObjectsWithTag("Head");
-        foreach (GameObject obj in headObjs)
+        while(playerHead==null)
         {
-            Debug.Log(obj.name);
-            PlayerHeadController player = obj.GetComponent<PlayerHeadController>();
-            if (player.enabled) playerHead = player;
+            GameObject[] headObjs = GameObject.FindGameObjectsWithTag("Head");
+            foreach (GameObject obj in headObjs)
+            {
+                PlayerHeadController player = obj.GetComponent<PlayerHeadController>();
+                if (player.enabled) playerHead = player;
+            }
+            yield return new WaitForSeconds(1f);
         }
-        if (playerHead == null) Debug.Log("DoorScript: player is null");
-        yield return new WaitForSeconds(0.5f);
+    }
+
+    public void incPlaneCounter()
+    {
+        planeCounter++;
+        Debug.Log("Plane Count Up: " + planeCounter);
+    }
+
+    public void decPlaneCounter()
+    {
+        planeCounter--;
+        Debug.Log("Plane Count Down: " + planeCounter);
     }
 }
