@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -657,7 +657,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &66097202
 MeshCollider:
@@ -4377,7 +4377,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &593594944
 MeshCollider:
@@ -4533,7 +4533,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &601070154
 MeshCollider:
@@ -4778,7 +4778,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!114 &619092337
 MonoBehaviour:
@@ -5295,7 +5295,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &672623735
 MeshCollider:
@@ -5549,7 +5549,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &722962029
 MeshCollider:
@@ -5846,7 +5846,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &742572225
 MeshCollider:
@@ -6734,11 +6734,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 6151562170063395334, guid: 0d728c371268f304b9036dc185c143b6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6151562170063395333, guid: 0d728c371268f304b9036dc185c143b6,
         type: 3}
       propertyPath: m_Size.y
@@ -6749,6 +6744,11 @@ PrefabInstance:
       propertyPath: Script
       value: 
       objectReference: {fileID: 1126240133}
+    - target: {fileID: 6151562170063395334, guid: 0d728c371268f304b9036dc185c143b6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d728c371268f304b9036dc185c143b6, type: 3}
 --- !u!4 &805462704 stripped
@@ -8186,7 +8186,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &1068003675
 MeshCollider:
@@ -9322,7 +9322,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &1277175756
 MeshCollider:
@@ -10680,7 +10680,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &1465634295
 MeshCollider:
@@ -11923,7 +11923,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &1589499725
 MeshCollider:
@@ -12082,7 +12082,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &1629817780
 MeshCollider:
@@ -12320,7 +12320,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &1643832548
 MeshCollider:
@@ -14334,7 +14334,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   objectHighlighter: {fileID: 0}
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  touchHighlightColor: {r: 0.53333336, g: 0.8784314, b: 0.4627451, a: 0}
   usingState: 0
 --- !u!64 &1875624233
 MeshCollider:
